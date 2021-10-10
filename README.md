@@ -2,7 +2,7 @@
 
 The files in this repository were used to configure the network depicted below.
 
-![TODO: Update the path with the name of your diagram](Images/diagram_filename.png)
+![alt text](https://github.com/xsj3n/Automated-Elk-Server/blob/master/Cloud-Diagram.png)
 
 
 This document contains the following details:
