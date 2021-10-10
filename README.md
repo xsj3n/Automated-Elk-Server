@@ -92,6 +92,8 @@ These Beats allow us to collect the following information from each machine:
 ### Using the Playbook
 In order to use the playbook, you will need to have an Ansible control node already configured. Assuming you have such a control node provisioned: 
 
+Note: Make sure to configure a hosts file for Ansible so the software knows which machines to execute playbooks on.
+
 SSH into the control node and follow the steps below:
 - Copy the playbooks into the control node
 - Create a hosts file to instruct Ansible which machines to run the playbooks on.
@@ -104,5 +106,6 @@ Clarifications
 - _Which file do you update to make Ansible run the playbook on a specific machine? How do I specify which machine to install the ELK server on versus which to install Filebeat on?_
 
 - _Which URL do you navigate to in order to check that the ELK server is running?
+- Navigate to https://<IP of ELK  machine>:5601. 5601 is the default port in the configuration files.
 
 _As a **Bonus**, provide the specific commands the user will need to run to download the playbook, update the files, etc._
