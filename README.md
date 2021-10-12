@@ -126,9 +126,10 @@ Clarifications
 
 _As a **Bonus**, provide the specific commands the user will need to run to download the playbook, update the files, etc._
   
- Playbook Use: - Use the following syntax to download the files: git clone <https://linktoproject.git>
-               - Remove the files and clone them once again to update the files
-               - The following syntax is used to run the playbooks: ansible <playbook-file> <target machine group>
-               - Note: Make sure the source for the copy module in the Metricbeat and Filebeat playbooks is pointing to where the configuration files are at on your machine.
+ Playbook Use: 
+  - Use the following syntax to download the files: git clone <https://linktoproject.git>
+  - Remove the files and clone them once again to update the files
+  - The following syntax is used to run the playbooks: ansible <playbook-file> <target machine group>
+  - Note: Make sure the source for the copy module in the Metricbeat and Filebeat playbooks is pointing to where the configuration files are at on your machine.
   
   
