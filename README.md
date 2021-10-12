@@ -127,9 +127,14 @@ Clarifications
 _As a **Bonus**, provide the specific commands the user will need to run to download the playbook, update the files, etc._
   
  Playbook Use: 
-  - Use the following syntax to download the files: git clone <https://linktoproject.git>
+  - Use the following syntax to download the files: git clone https://linktoproject.git
   - Remove the files and clone them once again to update the files
   - The following syntax is used to run the playbooks: ansible <playbook-file> <target machine group>
   - Note: Make sure the source for the copy module in the Metricbeat and Filebeat playbooks is pointing to where the configuration files are at on your machine.
+  
+### Scripts
+  - Two scripts are included within the scripts subdirectory to help with collecting system information and searching logs.
+    - A bash script that will print out free memory, disk usage, open files, and freedisk space of system.
+    - A simple bash script that can be used to search through a logs for a specific name and time within a log.
   
   
