@@ -92,8 +92,10 @@ These Beats allow us to collect the following information from each machine:
 Configuring the configuration files
   - The configuration file for filebeat should be editied on line 1106 to include the IP of the ELK machine, do the same on line 1806
   - The Metricbeat configuration file contains lines with IPs that need to be changed to the IP of the ELK machine.
+
 Misc
  - The command "docker ps" can be used to make list the docker containers running on a machine, and their status
+
 ### Using the Playbook
 In order to use the playbook, you will need to have an Ansible control node already configured. Assuming you have such a control node provisioned: 
 
