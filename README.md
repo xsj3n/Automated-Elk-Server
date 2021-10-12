@@ -72,7 +72,7 @@ The playbook implements the following tasks:
 
 The .yml elk playbook for installation can be found here.
 
-- install-elk.yml
+- [install-elk.yml](https://github.com/xsj3n/Automated-Elk-Server/blob/master/resources/filebeat-playbook.yml)
 
 ### Target Machines & Beats
 This ELK server is configured to monitor the following machines:
