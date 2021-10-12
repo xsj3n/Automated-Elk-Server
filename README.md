@@ -101,11 +101,34 @@ SSH into the control node and follow the steps below:
 
 Clarifications
 - _Which file is the playbook? Where do I copy it?_
-- The masterelk-playbook is the file which should be copied to /etc/ansible/files
+- There are 3 playbooks:
+  - [Metricbeat-playbook.yml](https://github.com/xsj3n/Automated-Elk-Server/blob/master/resources/metricbeat-playbook.yml)
+  - [Filebeat-playook.yml](https://github.com/xsj3n/Automated-Elk-Server/blob/master/resources/filebeat-playbook.yml)
+  - [install-elk.yml](https://github.com/xsj3n/Automated-Elk-Server/blob/master/resources/filebeat-playbook.yml)
+  - These should be copied to /etc/ansible/files/
 
 - _Which file do you update to make Ansible run the playbook on a specific machine? How do I specify which machine to install the ELK server on versus which to install Filebeat on?_
+ - /etc/ansible/hosts should apporiately group and point to target machines utilizng this format:
+  
+'''
+  
+[webservers]
+<IP of webserver>
+<IP of webserver>
+
+[elk]
+<IP of ELK machine>
+  
+'''
 
 - _Which URL do you navigate to in order to check that the ELK server is running?
 - Navigate to https://<IP of ELK  machine>:5601. 5601 is the default port in the configuration files.
 
 _As a **Bonus**, provide the specific commands the user will need to run to download the playbook, update the files, etc._
+  
+ Playbook Use: - Use the following syntax to download the files: git clone <https://linktoproject.git>
+               - Remove the files and clone them once again to update the files
+               - The following syntax is used to run the playbooks: ansible <playbook-file> <target machine group>
+               - Note: Make sure the source for the copy module in the Metricbeat and Filebeat playbooks is pointing to where the configuration files are at on your machine.
+  
+  
