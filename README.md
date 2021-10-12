@@ -110,7 +110,7 @@ Clarifications
 - _Which file do you update to make Ansible run the playbook on a specific machine? How do I specify which machine to install the ELK server on versus which to install Filebeat on?_
  - /etc/ansible/hosts should apporiately group and point to target machines utilizng this format:
   
-'''
+```
   
 [webservers]
 <IP of webserver>
@@ -119,7 +119,7 @@ Clarifications
 [elk]
 <IP of ELK machine>
   
-'''
+```
 
 - _Which URL do you navigate to in order to check that the ELK server is running?
 - Navigate to https://<IP of ELK  machine>:5601. 5601 is the default port in the configuration files.
