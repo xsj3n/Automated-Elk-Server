@@ -89,6 +89,10 @@ These Beats allow us to collect the following information from each machine:
 - Both the Web-1 and Web-2 machine send system metric information such as CPU usages and things of the like with Metricbeat.
 - Additonally, whatever system logs are produced on the web servers will be collected with the system Filebeat module.
 
+Configuring the configuration files
+  - The configuration file for filebeat should be editied on line 1106 to include the IP of the ELK machine, do the same on line 1806
+  - The Metricbeat configuration file contains lines with IPs that need to be changed to the IP of the ELK machine.
+
 ### Using the Playbook
 In order to use the playbook, you will need to have an Ansible control node already configured. Assuming you have such a control node provisioned: 
 
@@ -103,8 +107,11 @@ Clarifications
 - _Which file is the playbook? Where do I copy it?_
 - There are 3 playbooks:
   - [Metricbeat-playbook.yml](https://github.com/xsj3n/Automated-Elk-Server/blob/master/resources/metricbeat-playbook.yml)
+    - [Metricbeat-config.yml](https://github.com/xsj3n/Automated-Elk-Server/blob/master/resources/filebeat-config.yml)
   - [Filebeat-playook.yml](https://github.com/xsj3n/Automated-Elk-Server/blob/master/resources/filebeat-playbook.yml)
+    - [Filebeat-config.yml](https://github.com/xsj3n/Automated-Elk-Server/blob/master/resources/metricbeat-config.yml)
   - [install-elk.yml](https://github.com/xsj3n/Automated-Elk-Server/blob/master/resources/filebeat-playbook.yml)
+  
   - These should be copied to /etc/ansible/files/
 
 - _Which file do you update to make Ansible run the playbook on a specific machine? How do I specify which machine to install the ELK server on versus which to install Filebeat on?_
